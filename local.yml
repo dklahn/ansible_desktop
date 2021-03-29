@@ -21,11 +21,13 @@
       group: root
 
   - name: set wallpeaper
+    become_user: dklahn
     deconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
   - name: set allpaper position
+    become_user: dklahn
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"

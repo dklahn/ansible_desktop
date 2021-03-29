@@ -4,6 +4,28 @@
   become: true
 
   tasks:
-  - name: install htop
+  - name: install packages
     package:
-      name: slack
+      name:
+        - slack
+        - htop
+        - tmux
+        - vim-nox
+        - zoom
+
+  - name: copy wallpaper file
+    copy:
+      scr: files/199149.jpg
+      dest: /usr/share/backgrounds/ansible-wallperper.jpg
+      owner: root
+      group: root
+
+  - name: set wallpeaper
+    deconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
+
+  - name: set allpaper position
+    dconf:
+      key: "/org/gnome/desktop/background/picture-options"
+      value: "'zoom'"

@@ -12,7 +12,6 @@
         - htop
         - tmux
         - vim-nox
-        - zoom
 
   - name: copy wallpaper file
     copy:

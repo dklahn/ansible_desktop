@@ -12,6 +12,10 @@
         - htop
         - tmux
         - vim-nox
+        - flameshot
+        - joplin
+        - notepadqq
+        - filezilla
 
   - name: copy wallpaper file
     copy:

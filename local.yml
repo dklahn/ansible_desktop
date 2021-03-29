@@ -7,6 +7,7 @@
   - name: install packages
     package:
       name:
+        - python3-psutil
         - slack
         - htop
         - tmux
@@ -20,9 +21,9 @@
       owner: root
       group: root
 
-  - name: set wallpeaper
+  - name: set wallpaper
     become_user: dklahn
-    deconf:
+    dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 

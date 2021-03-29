@@ -15,7 +15,7 @@
 
   - name: copy wallpaper file
     copy:
-      scr: files/199149.jpg
+      src: files/199149.jpg
       dest: /usr/share/backgrounds/ansible-wallperper.jpg
       owner: root
       group: root

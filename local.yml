@@ -13,7 +13,7 @@
         - tmux
         - vim-nox
         - flameshot
-        - joplin
+#        - joplin
         - notepadqq
         - filezilla
 

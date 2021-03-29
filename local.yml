@@ -38,3 +38,22 @@
       dest: /home/dklahn/.bashrc
       owner: dklahn
       group: dklahn
+
+  - name: add ansible user
+    user:
+      name: velociraptor
+      system: yes
+
+  - name: setup sudo for ansible user
+    copy:
+      src: files/sudoer_velociraptor
+      dest: /etc/sudoers.d/velociraptor
+      owner: root
+      group: root
+
+  - name add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: velociraptor
+      minute: "*/10"
+      job: ansible-pull -o -U https://github.com/dklahn/ansible_desktop.git

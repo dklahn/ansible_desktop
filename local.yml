@@ -17,6 +17,10 @@
         - notepadqq
         - filezilla
 
+  - name: install citrix
+    apt:
+      deb: https://downloads.citrix.com/19171/icaclient_21.3.0.38_amd64.deb?__gda__=1617071059_c421bbb4653c19dd0b3e57cacc527a9d
+
   - name: copy wallpaper file
     copy:
       src: files/199149.jpg

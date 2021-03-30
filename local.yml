@@ -8,7 +8,7 @@
     package:
       name:
         - python3-psutil
-        - slack
+        - slack-desktop
         - htop
         - tmux
         - vim-nox
@@ -16,6 +16,7 @@
 #        - joplin
         - notepadqq
         - filezilla
+        - chromium
 
   - name: install citrix
     apt:
